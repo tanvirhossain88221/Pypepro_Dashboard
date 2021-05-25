@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pypepro</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Front Awsume -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+
+<body>
+
+    <main>
+        <div class="row m-0">
+
+            <!-- ------- Sidebar -------  -->
+            <div class="col-md-2 sidebar-custom bg-custom">
+
+                <nav id="sidebar">
+                    <div class="sidebar-header pt-4 ps-4">
+                        <a class="navbar-brand brand-icon" href="#"><img src="./images/logo.png" class="img-fluid"
+                                alt="">
+                            <span class="fs-3 text-white brand-name">Pypepro</span>
+                        </a>
+
+                    </div>
+                    <ul class="list-unstyled components py-4 ps-4 sidebar-item">
+                        <li>
+                            <a href="#"><i class="fas fa-home"></i> <span>Home</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-inbox"></i> <span>Inbox</span></a>
+                        </li>
+                        <li class="active">
+                            <a href="#"><i class="fas fa-dollar-sign"></i> <span>Deals</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-calendar-week"></i> <span>Calender</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-user-friends"></i> <span>Contact</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-bullhorn"></i> <span>Marketing</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-search-location"></i> <span>Find New Leads</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-calendar-week"></i> <span>Triggers</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-chart-pie"></i> <span>Reporting</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-cog"></i> <span>Setting</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-play-circle"></i> <span>Training</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-user"></i> <span>Accounts</span></a>
+                        </li>
+                        <button type="button" id="sidebarCollapse" class="btn fs-3 text-primary">
+                            <i class="fas fa-align-left"></i>
+                        </button>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="col-md-10 main-content p-0 m-0" style="background: #E5E5E5">
+
+                <!-- --------- Header Navbar ---------- -->
+                <nav class="navbar navbar-expand-lg navbar-custom bg-custom">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon navbar-toggler-icon-custom"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex align-items-center">
+                                <li class="nav-item">
+                                    <form class="d-flex mt-4">
+                                        <div class="p-1 bg-light rounded rounded-pill border shadow-sm mb-4">
+                                            <div class="input-group">
+                                                <input type="search" placeholder="Search"
+                                                    aria-describedby="button-addon1"
+                                                    class="form-control border-0 bg-light">
+                                                <div class="input-group-append">
+                                                    <button id="button-addon1" type="submit"
+                                                        class="btn btn-link text-primary"><i class="fa fa-search"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="#">
+                                        <i class="fas fa-phone-alt nav-icon"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><i class="fas fa-plus nav-icon"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><i class="far fa-bell nav-icon"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><i class="fas fa-question nav-icon"></i></a>
+                                </li>
+                                <li class="nav-item me-4 dropdown" style="width: 255px">
+                                    <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        <div class="row d-flex justify-content-end align-items-center">
+                                            <div class="col-3 d-flex justify-content-end">
+                                                <img src="./images/profile.png" class="profile" alt="">
+                                            </div>
+                                            <div class="col-7 text-white">
+                                                <span>Admin</span>
+                                                <span>tanvirhossain88221@gmail.com</span>
+                                            </div>
+                                            <div class="col-2">
+                                                <i class="fas fa-sort-down"></i>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </nav>
+
+                <section class="content-section m-3">
+
+                    <!-- ------- Deals Header -------- -->
+                    <div class="px-4 pt-3">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <h2 class="fw-bolder">Deals</h2>
+                            </div>
+                            <div class="col-md-7">
+                                <span class="arrange-icon">
+                                    <i class="fas fa-list-ul"></i>
+                                    <i class="fas fa-th"></i>
+                                    <i class="fas fa-th-large"></i>
+                                    <i class="fas fa-chart-line"></i>
+                                </span>
+                                <button class="btn btn-primary mx-3"> <i class="fas fa-plus-circle"></i> Create
+                                    List</button>
+                                <button class="btn btn-primary me-3"> <i class="fas fa-cog"></i> Settings</button>
+
+                                <span class="eye-custom">
+                                    <i class="fas fa-eye-slash"></i>
+                                </span>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <hr>
+                    <!-- -------- Search Bar -------- -->
+
+                    <div class="row px-5">
+
+                        <div class="col-md-3">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Open this select menu</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Active</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="col-md-1">
+                            <select class="form-select">
+                                <option>#</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                            <i class=""></i>
+                        </div>
+                        <div class="col-md-6 d-flex justify-content-md-end align-center-center">
+
+                            <div class="w-75 p-1 bg-light rounded rounded-pill border shadow-sm mb-4">
+                                <div class="input-group">
+                                    <input type="search" placeholder="Search" aria-describedby="button-addon1"
+                                        class="form-control border-0 bg-light">
+                                    <div class="input-group-append">
+                                        <button id="button-addon1" type="submit" class="btn btn-link text-primary"><i
+                                                class="fa fa-search"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <p class="py-2 px-5">Total Pipeline Value: <span class="text-primary">$20K</span> | Total Open
+                        Deals: <span class="text-primary">$20K</span> | Total Won: <span class="text-primary">$0</span>
+                        | Total Last: <span class="text-primary">$0</span>
+                    </p>
+
+
+                    <section class="m-3 p-3 details-section">
+
+
+                        <!-- ----- Breadcrumb --------- -->
+                        <div class="breadcrumb-ul m-auto d-flex justify-content-center align-items-center">
+                            <div class="breadcrumb-list ps-3 py-3 pe-2">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <p class="fs-5 fw-bolder">John Do</p>
+                                        <span class="text-secondary">1 Deal</span>
+                                        <span class="ps-4 fw-bold ls-2">$1.2K</span>
+                                    </div>
+                                    <div class="col-md-4 breadcrumb-icon d-flex justify-content-end align-items-center">
+                                        <i class="fas fa-plus-circle"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="breadcrumb-list ps-4 py-3 pe-2">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <p class="fs-5 fw-bolder">John Do</p>
+                                        <span class="text-secondary">1 Deal</span>
+                                        <span class="ps-4 fw-bold ls-2">$1.2K</span>
+                                    </div>
+                                    <div class="col-md-4 breadcrumb-icon d-flex justify-content-end align-items-center">
+                                        <i class="fas fa-plus-circle"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="breadcrumb-list ps-4 py-3 pe-2">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <p class="fs-5 fw-bolder">John Do</p>
+                                        <span class="text-secondary">1 Deal</span>
+                                        <span class="ps-4 fw-bold ls-2">$1.2K</span>
+                                    </div>
+                                    <div class="col-md-4 breadcrumb-icon d-flex justify-content-end align-items-center">
+                                        <i class="fas fa-plus-circle"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="breadcrumb-list ps-4 py-3 pe-2">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <p class="fs-5 fw-bolder">John Do</p>
+                                        <span class="text-secondary">1 Deal</span>
+                                        <span class="ps-4 fw-bold ls-2">$1.2K</span>
+                                    </div>
+                                    <div class="col-md-4 breadcrumb-icon d-flex justify-content-end align-items-center">
+                                        <i class="fas fa-plus-circle"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- ---------- Deals Details ----------  -->
+
+                        <section>
+
+                            <div class="row m-2">
+
+                                <!-- ----- 1st column ---- -->
+                                <div class="col-md-3 p-2 mb-sm-3 overflow-auto" style="height: 50vh">
+                                    <div class="card mb-2 border-0 card-custom">
+                                        <div class="card-body">
+                                            <p class="card-title fw-bolder">John Do <span
+                                                    class="text-primary ls-2">($1.2K)</span></p>
+                                            <small class="card-subtitle mb-2 text-muted">Time in Stage: 1 week
+                                                Ago</small>
+                                            <div class="d-flex justify-content-between align-items-center pt-2">
+                                                <div class="details-icon">
+                                                    <i class="fas fa-user"></i>
+                                                    <i class="fas fa-comment-dots"></i>
+                                                    <i class="fas fa-phone-alt"></i>
+                                                    <i class="fas fa-microphone-alt"></i>
+                                                    <i class="fas fa-envelope"></i>
+                                                    <i class="fas fa-clipboard-list"></i>
+                                                </div>
+                                                <div class="more-details-icon">
+                                                    <i class="fas fa-chevron-right"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card mb-2 border-0 card-custom">
+                                        <div class="card-body">
+                                            <p class="card-title fw-bolder">John Do <span
+                                                    class="text-primary ls-2">($1.2K)</span></p>
+                                            <small class="card-subtitle mb-2 text-muted">Time in Stage: 1 week
+                                                Ago</small>
+                                            <div class="d-flex justify-content-between align-items-center pt-2">
+                                                <div class="details-icon">
+                                                    <i class="fas fa-user"></i>
+                                                    <i class="fas fa-comment-dots"></i>
+                                                    <i class="fas fa-phone-alt"></i>
+                                                    <i class="fas fa-microphone-alt"></i>
+                                                    <i class="fas fa-envelope"></i>
+                                                    <i class="fas fa-clipboard-list"></i>
+                                                </div>
+                                                <div class="more-details-icon">
+                                                    <i class="fas fa-chevron-right"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card mb-2 border-0 card-custom">
+                                        <div class="card-body">
+                                            <p class="card-title fw-bolder">John Do <span
+                                                    class="text-primary ls-2">($1.2K)</span></p>
+                                            <small class="card-subtitle mb-2 text-muted">Time in Stage: 1 week
+                                                Ago</small>
+                                            <div class="d-flex justify-content-between align-items-center pt-2">
+                                                <div class="details-icon">
+                                                    <i class="fas fa-user"></i>
+                                                    <i class="fas fa-comment-dots"></i>
+                                                    <i class="fas fa-phone-alt"></i>
+                                                    <i class="fas fa-microphone-alt"></i>
+                                                    <i class="fas fa-envelope"></i>
+                                                    <i class="fas fa-clipboard-list"></i>
+                                                </div>
+                                                <div class="more-details-icon">
+                                                    <i class="fas fa-chevron-right"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card mb-2 border-0 card-custom">
+                                        <div class="card-body">
+                                            <p class="card-title fw-bolder">John Do <span
+                                                    class="text-primary ls-2">($1.2K)</span></p>
+                                            <small class="card-subtitle mb-2 text-muted">Time in Stage: 1 week
+                                                Ago</small>
+                                            <div class="d-flex justify-content-between align-items-center pt-2">
+                                                <div class="details-icon">
+                                                    <i class="fas fa-user"></i>
+                                                    <i class="fas fa-comment-dots"></i>
+                                                    <i class="fas fa-phone-alt"></i>
+                                                    <i class="fas fa-microphone-alt"></i>
+                                                    <i class="fas fa-envelope"></i>
+                                                    <i class="fas fa-clipboard-list"></i>
+                                                </div>
+                                                <div class="more-details-icon">
+                                                    <i class="fas fa-chevron-right"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- ----- 2nd column ---- -->
+                                <div class="col-md-3 p-2 mb-sm-3 overflow-auto d-flex justify-content-center align-items-center"
+                                    style="height: 50vh">
+
+                                    <div>
+
+                                        <h6>No Deals in This Stage</h6>
+                                        <h5><span class="fs-3" style="color: #3C7EF3"><i
+                                                    class="fas fa-plus-circle"></i></span> Add
+                                            New Deal</h5>
+                                    </div>
+
+
+                                </div>
+
+                                <!-- ----- 3rd column ---- -->
+                                <div class="col-md-3 p-2 mb-sm-3 overflow-auto" style="height: 50vh">
+                                    <div class="card mb-2 border-0 card-custom">
+                                        <div class="card-body">
+                                            <p class="card-title fw-bolder">John Do <span
+                                                    class="text-primary ls-2">($1.2K)</span></p>
+                                            <small class="card-subtitle mb-2 text-muted">Time in Stage: 1 week
+                                                Ago</small>
+                                            <div class="d-flex justify-content-between align-items-center pt-2">
+                                                <div class="details-icon">
+                                                    <i class="fas fa-user"></i>
+                                                    <i class="fas fa-comment-dots"></i>
+                                                    <i class="fas fa-phone-alt"></i>
+                                                    <i class="fas fa-microphone-alt"></i>
+                                                    <i class="fas fa-envelope"></i>
+                                                    <i class="fas fa-clipboard-list"></i>
+                                                </div>
+                                                <div class="more-details-icon">
+                                                    <i class="fas fa-chevron-right"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card mb-2 border-0 card-custom">
+                                        <div class="card-body">
+                                            <p class="card-title fw-bolder">John Do <span
+                                                    class="text-primary ls-2">($1.2K)</span></p>
+                                            <small class="card-subtitle mb-2 text-muted">Time in Stage: 1 week
+                                                Ago</small>
+                                            <div class="d-flex justify-content-between align-items-center pt-2">
+                                                <div class="details-icon">
+                                                    <i class="fas fa-user"></i>
+                                                    <i class="fas fa-comment-dots"></i>
+                                                    <i class="fas fa-phone-alt"></i>
+                                                    <i class="fas fa-microphone-alt"></i>
+                                                    <i class="fas fa-envelope"></i>
+                                                    <i class="fas fa-clipboard-list"></i>
+                                                </div>
+                                                <div class="more-details-icon">
+                                                    <i class="fas fa-chevron-right"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card mb-2 border-0 card-custom">
+                                        <div class="card-body">
+                                            <p class="card-title fw-bolder">John Do <span
+                                                    class="text-primary ls-2">($1.2K)</span></p>
+                                            <small class="card-subtitle mb-2 text-muted">Time in Stage: 1 week
+                                                Ago</small>
+                                            <div class="d-flex justify-content-between align-items-center pt-2">
+                                                <div class="details-icon">
+                                                    <i class="fas fa-user"></i>
+                                                    <i class="fas fa-comment-dots"></i>
+                                                    <i class="fas fa-phone-alt"></i>
+                                                    <i class="fas fa-microphone-alt"></i>
+                                                    <i class="fas fa-envelope"></i>
+                                                    <i class="fas fa-clipboard-list"></i>
+                                                </div>
+                                                <div class="more-details-icon">
+                                                    <i class="fas fa-chevron-right"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card mb-2 border-0 card-custom">
+                                        <div class="card-body">
+                                            <p class="card-title fw-bolder">John Do <span
+                                                    class="text-primary ls-2">($1.2K)</span></p>
+                                            <small class="card-subtitle mb-2 text-muted">Time in Stage: 1 week
+                                                Ago</small>
+                                            <div class="d-flex justify-content-between align-items-center pt-2">
+                                                <div class="details-icon">
+                                                    <i class="fas fa-user"></i>
+                                                    <i class="fas fa-comment-dots"></i>
+                                                    <i class="fas fa-phone-alt"></i>
+                                                    <i class="fas fa-microphone-alt"></i>
+                                                    <i class="fas fa-envelope"></i>
+                                                    <i class="fas fa-clipboard-list"></i>
+                                                </div>
+                                                <div class="more-details-icon">
+                                                    <i class="fas fa-chevron-right"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- ----- 4th column ---- -->
+                                <div class="col-md-3 p-2 overflow-auto" style="height: 50vh">
+                                    <div class="card mb-2 border-0 card-custom">
+                                        <div class="card-body">
+                                            <p class="card-title fw-bolder">John Do <span
+                                                    class="text-primary ls-2">($1.2K)</span></p>
+                                            <small class="card-subtitle mb-2 text-muted">Time in Stage: 1 week
+                                                Ago</small>
+                                            <div class="d-flex justify-content-between align-items-center pt-2">
+                                                <div class="details-icon">
+                                                    <i class="fas fa-user"></i>
+                                                    <i class="fas fa-comment-dots"></i>
+                                                    <i class="fas fa-phone-alt"></i>
+                                                    <i class="fas fa-microphone-alt"></i>
+                                                    <i class="fas fa-envelope"></i>
+                                                    <i class="fas fa-clipboard-list"></i>
+                                                </div>
+                                                <div class="more-details-icon">
+                                                    <i class="fas fa-chevron-right"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card mb-2 border-0 card-custom">
+                                        <div class="card-body">
+                                            <p class="card-title fw-bolder">John Do <span
+                                                    class="text-primary ls-2">($1.2K)</span></p>
+                                            <small class="card-subtitle mb-2 text-muted">Time in Stage: 1 week
+                                                Ago</small>
+                                            <div class="d-flex justify-content-between align-items-center pt-2">
+                                                <div class="details-icon">
+                                                    <i class="fas fa-user"></i>
+                                                    <i class="fas fa-comment-dots"></i>
+                                                    <i class="fas fa-phone-alt"></i>
+                                                    <i class="fas fa-microphone-alt"></i>
+                                                    <i class="fas fa-envelope"></i>
+                                                    <i class="fas fa-clipboard-list"></i>
+                                                </div>
+                                                <div class="more-details-icon">
+                                                    <i class="fas fa-chevron-right"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card mb-2 border-0 card-custom">
+                                        <div class="card-body">
+                                            <p class="card-title fw-bolder">John Do <span
+                                                    class="text-primary ls-2">($1.2K)</span></p>
+                                            <small class="card-subtitle mb-2 text-muted">Time in Stage: 1 week
+                                                Ago</small>
+                                            <div class="d-flex justify-content-between align-items-center pt-2">
+                                                <div class="details-icon">
+                                                    <i class="fas fa-user"></i>
+                                                    <i class="fas fa-comment-dots"></i>
+                                                    <i class="fas fa-phone-alt"></i>
+                                                    <i class="fas fa-microphone-alt"></i>
+                                                    <i class="fas fa-envelope"></i>
+                                                    <i class="fas fa-clipboard-list"></i>
+                                                </div>
+                                                <div class="more-details-icon">
+                                                    <i class="fas fa-chevron-right"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card mb-2 border-0 card-custom">
+                                        <div class="card-body">
+                                            <p class="card-title fw-bolder">John Do <span
+                                                    class="text-primary ls-2">($1.2K)</span></p>
+                                            <small class="card-subtitle mb-2 text-muted">Time in Stage: 1 week
+                                                Ago</small>
+                                            <div class="d-flex justify-content-between align-items-center pt-2">
+                                                <div class="details-icon">
+                                                    <i class="fas fa-user"></i>
+                                                    <i class="fas fa-comment-dots"></i>
+                                                    <i class="fas fa-phone-alt"></i>
+                                                    <i class="fas fa-microphone-alt"></i>
+                                                    <i class="fas fa-envelope"></i>
+                                                    <i class="fas fa-clipboard-list"></i>
+                                                </div>
+                                                <div class="more-details-icon">
+                                                    <i class="fas fa-chevron-right"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </section>
+
+                    </section>
+
+                    <!-- ---------- Action section --------- -->
+
+                    <section>
+                        <div class="action row px-3">
+                            <div class="col-md-3">
+                                <h5 class="action-delete text-center"> <i class="far fa-trash-alt"></i> Delete</h5>
+                            </div>
+                            <div class="col-md-3">
+                                <h5 class="action-win text-center"> <i class="fas fa-trophy"></i> Win</h5>
+                            </div>
+                            <div class="col-md-3">
+                                <h5 class="action-lost text-center"> <i class="fas fa-sad-tear"></i> Lost</h5>
+                            </div>
+                            <div class="col-md-3">
+                                <h5 class="action-pipeline text-center">Pipeline</h5>
+                            </div>
+                        </div>
+                    </section>
+
+                </section>
+
+            </div>
+        </div>
+
+
+
+    </main>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>

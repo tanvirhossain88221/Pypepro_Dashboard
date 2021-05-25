@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.bg-custom{
+    background: #133159;
+}
+.ls-2{
+    letter-spacing: 2px;
+}
+.navbar-custom{
+    padding: 0;
+    height: 60px;
+    /* line-height: 80px; */
+}
+.brand-icon img{
+    width: 45.5px;
+    height: 45.5px;
+    color: rgb(255, 255, 255);
+}
+.custom-toggler .navbar-toggler-icon-custom{
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255, 255, 255)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+.profile{
+    height: 40px;
+}
+.nav-icon{
+    padding: 8px 9px;
+    color: white;
+    border-radius: 50%;
+    background: #3C7EF3;
+    
+}
+/* ////// Sidebar ////// */
+.sidebar-item li{
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    transition: all ease 0.2s;
+}
+.active{
+    background: #3C7EF3;
+}
+.sidebar-item li:hover{
+    background: #3C7EF3;
+    transition: all ease 0.2s;
+}
+.sidebar-item li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+}
+.collapsed .sidebar-item li{
+    text-align: center;
+}
+.collapsed .sidebar-item li a{
+    font-size: 20px;
+}
+.collapsed .sidebar-item li a span{
+    display: none;
+}
+.content-section{
+    background: #fff;
+    border-radius: 10px;
+}
+/* //////// Deals Header ///////// */
+.arrange-icon .fas{
+    font-size: 20px;
+    padding: 10px;
+    color: #546376;
+    background: #F6F7FB;
+    transition: all ease 0.2s;
+}
+.arrange-icon .fas:first-child{
+    border-radius: 8px 0px 0px 8px;
+    
+}
+.arrange-icon .fas:last-child{
+    border-radius: 0px 8px 8px 0px;
+}
+.arrange-icon .fas:hover,
+.eye-custom:hover{
+    color: #fff;
+    background: #133159;
+    transition: all ease 0.2s;
+}
+.eye-custom{
+    border: 1px solid #546376;
+    color: #546376;
+    padding: 10px;
+    font-size: 14px;
+    border-radius:50%;
+}
+
+/* ///// details Section ////  */
+.details-section{
+    background: #F6F7FB;
+    border-radius: 5px;
+}
+/* //// Breadcrumb //// */
+.breadcrumb-ul{
+    width: 98%;
+}
+.breadcrumb-list {
+    position: relative;
+    background: #E3EBFA;
+    color: #000;
+    width: 30%;
+    height: auto;
+    line-height: 1;
+}
+.breadcrumb-list:first-child{
+    border-radius: 5px 0px 0px 5px;
+}
+
+.breadcrumb-list::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 42px;
+    background: #E3EBFA;
+    top: 0;
+    right: -10px;
+    z-index: 9;
+    border-right: 2px solid #fff;
+    transform: skewX(20deg);
+}
+
+.breadcrumb-list::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 42px;
+    background: #E3EBFA;
+    bottom: 0;
+    right: -10px;
+    z-index: 9;
+    border-right: 2px solid #fff;
+    transform: skewX(-20deg);
+}
+.breadcrumb-icon .fas{
+    font-size: 35px;
+    color: #3C7EF3;
+}
+
+/* ///// Details Card //////// */
+.details-icon .fas{
+    font-size: 10px;
+    padding: 6px;
+    border: 1px solid #546376;
+    color: #546376;
+    border-radius: 50%;
+    
+}
+.details-icon .fas:hover{
+    background: #133159;
+    color: #fff;
+    border: 1px solid #133159;
+
+}
+.more-details-icon .fas{
+    font-size: 15px;
+    padding: 5px 8px;
+    color: #fff;
+    background: #133159;
+    border-radius: 50%;
+
+}
+.card-custom{
+    border-radius: 10px;
+    box-shadow: 1px 5px 10px #ddd;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 2px grey; 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #133159; 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #081f3d; 
+}
+
+/* //// Action section ///// */
+.action h5{
+    padding: 5px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.action-delete{
+    color: #FF5858;
+    border: 1px solid #FF5858;
+}
+.action-win{
+    color: #6FCF97;
+    border: 1px solid #6FCF97;
+}
+.action-lost{
+    color: #FF5858;
+    border: 1px solid #FF5858;
+}
+.action-pipeline{
+    color: #FFB053;
+    border: 1px solid #FF5858;
+}
+
+
+
+
+
