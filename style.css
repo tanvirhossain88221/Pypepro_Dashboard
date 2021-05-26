@@ -221,16 +221,6 @@ body{
 }
 
 
-/* div.scroll {
-    margin: 4px, 4px;
-    padding: 4px;
-    background-color: #08c708;
-    width: 1300px;
-    overflow-x: auto;
-    overflow-y: hidden;
-    white-space: nowrap;
-} */
-
 @media screen and (max-width: 768px) {
   .navvv {
       background-color: #133159;
